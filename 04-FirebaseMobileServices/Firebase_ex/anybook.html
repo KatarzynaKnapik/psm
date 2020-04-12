@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <title>Firebase</title>
+    <style>
+        /* h3{
+            margin:4px auto;
+            display: flex;
+            font-weight: 800;
+        } */
+    </style>
+    
+</head>
+<body>
+    <div class="app-centent">
+        <h3 class="mx-auto text-info" style="width: 500px;">Enter a new book into our database!</h3>
+        <form>
+            <div class="form-group" style="width: 500px; margin: 5px auto;">
+                <label>Author Name: </label>
+                <input type="text" name="name" class="form-control"><br>
+                <label>Author Surname: </label>
+                <input type="text" name="surname" class="form-control"><br>
+                <label>Book title: </label>
+                <input type="text" name="title" class="form-control"><br>
+                <label>Genre: </label>
+                <input type="text" name="genre" class="form-control"><br>
+                <label>Year: </label>
+                <input type="number" name="year" class="form-control"><br>
+                <label>ISBN: </label>
+                <input type="text" name="isbn" class="form-control">
+                <br>
+            </div>
+            
+            <button type="button" class="btn btn-info btn-block mx-auto" style="width: 500px">Add a book</button>
+        </form>
+    
+        <div id="books" style="max-width: 700px; margin: 3px auto"></div>
+    </div>
+    
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAfNcf_Wz3GO1f1ycV7Hv5h9MHDMMXHH3w",
+            authDomain: "books-e7296.firebaseapp.com",
+            databaseURL: "https://books-e7296.firebaseio.com",
+            projectId: "books-e7296",
+            storageBucket: "books-e7296.appspot.com",
+            messagingSenderId: "1097731688190",
+            appId: "1:1097731688190:web:84896f31096792663a87af"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="book.js"></script>
+    
+</body>
+</html>

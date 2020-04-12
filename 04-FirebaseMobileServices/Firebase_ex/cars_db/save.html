@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <title>Cars</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+            margin: 2px;
+            }
+        table{
+            margin: 10px auto;
+        }   
+    
+    </style>
+</head>
+<body>
+
+    <div class="content">
+
+        <button>Load From JSON</button>
+
+        <table>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>VIN</th>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDgd1zKmXXIu8JDZoezJcxlnfaT0130m8M",
+          authDomain: "cars-b7076.firebaseapp.com",
+          databaseURL: "https://cars-b7076.firebaseio.com",
+          projectId: "cars-b7076",
+          storageBucket: "cars-b7076.appspot.com",
+          messagingSenderId: "628352525880",
+          appId: "1:628352525880:web:889baddbdbaaab856168cd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        // db.settings({ timestampsInSnapshots: true});
+        </script>
+        <script src="save.js"></script>
+    </script>
+    
+</body>
+</html>
